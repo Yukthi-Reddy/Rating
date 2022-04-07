@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="form.css">
+    <title>Admin page</title>
+    <script>
+        function validate(){
+            var name=document.forms[0].elements[0].value;
+            var email=document.forms[0].elements[1].value;
+            var mobile=document.forms[0].elements[2].value;
+            
+            var pemail=new RegExp("[a-z0-9]+[_]*[a-z0-9]+@[a-z]+.[a-z]+$","g");
+            var pmobile= /^\d{10}$/;
+
+            let flag = true
+            if (name == "") { 
+                alert("Name must be filled out");
+                flag = false;
+            }
+            if(!pemail.exec(email)) { 
+                alert("Provide Complete Email-id");
+                flag = false;
+            }
+            if(!pmobile.exec(mobile)) { 
+                alert("Not a Valid Mobile Number");
+                flag = false;
+            }
+
+            if(!flag) return false;
+        }
+        
+    </script>
+    <style>
+        body {
+          background-image: url("survey1.jpg");
+          background-color: rgb(248, 247, 245);
+          background-size: cover;
+          position:static;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image{
+                opacity:0.01;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <header class="header">
+            <h1 id="title">
+                Admin 
+            </h1>
+        </header>
+        <form name="survey" method="post"  id="survey-form" onsubmit="validate()" action="" >
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="Enter your name (*)" required>
+            </div>
+            <!-- end of text section -->
+
+            <!-- Type Email section -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email (*)" required>
+            </div>
+            <!-- end of Email section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="phone" id="phone" class="formControl" placeholder="Enter your phone number (+91)" required>
+            </div>
+            <!-- end of Number section -->
+           
+            <a href="https://docs.google.com/spreadsheets/d/1IPao1NVJtudbK0r7bv6BLJs1CNQMUUEVm7KupbIIUEk/edit#gid=0">
+                <input type="button" class="button" value="Login">
+            </a>   
+         </form>
+    </div>
+</body>
+</html>

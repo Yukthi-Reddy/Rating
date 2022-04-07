@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="form.css">
+    <title>Survey Form</title>
+    <style>
+    form{
+    background: #90e2dee5;
+    border-radius: 0.25rem;
+    }
+    body {
+     background-color: rgb(176, 227, 250);
+     background-size: cover;
+     position:relative;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-image{
+        opacity:0.01;
+    }
+}
+    </style>
+    </head>
+<body>
+   <header class="header">
+            <h1 id="title">
+                Questionaire
+            </h1>
+</header>
+  <form name="google-sheet" method="post" action="https://sheetdb.io/api/v1/0dh7zrh5ymtoy" id="sheetdb-form">
+           
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest">1.How is your training going on ?</p>
+                    <input type="radio" name="data[q1]" id="q1" value="5"
+                    class="inputRadio"
+                    checked>5
+
+                    <input type="radio" name="data[q1]" id="q1" value="4"
+                    class="inputRadio"
+                    >4
+                
+                    <input type="radio" name="data[q1]" id="q1" value="3"
+                    class="inputRadio"
+                    > 3
+                    <input type="radio" name="data[1]" id="q1" value="2"
+                    class="inputRadio"
+                    >2
+          
+                    <input type="radio" name="data[q1]" id="q1" value="1"
+                    class="inputRadio"
+                    > 1
+            </div>
+            <!-- end of radio button -->
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest">2.How do you think the work is distributed evenly across your team ?</p>
+                    <input type="radio" name="data[q2]" id="q2" value="5"
+                    class="inputRadio"
+                    checked> 5
+                    <input type="radio" name="data[q2]" id="q2" value="4"
+                    class="inputRadio"
+                    >4
+                    <input type="radio" name="data[q2]" id="q2" value="3"
+                    class="inputRadio"
+                    > 3
+                    <input type="radio" name="data[q2]" id="q2" value="2"
+                    class="inputRadio"
+                    >2
+                    <input type="radio" name="data[q2]" id="q2" value="1"
+                    class="inputRadio"
+                    >1
+             </div>
+            <!-- radio button section -->
+            <div class="form-group">
+                <p id="quest">3.How happy and satisfied are you with the organization?</p>
+                    <input type="radio" name="data[q3]" id="q3" value="5"
+                    class="inputRadio" checked>5
+                    <input type="radio" name="data[q3]" id="q3" value="4"
+                    class="inputRadio">4
+                
+                    <input type="radio" name="data[q3]" id="q3"  value="3"
+                    class="inputRadio"> 3
+               
+                    <input type="radio" name="data[q3]" id="q3"  value="2"
+                    class="inputRadio">2
+                
+                    <input type="radio" name="data[q3]" id="q3" value="1"
+                    class="inputRadio"> 1
+                
+             </div>
+             <div class="form-group">
+                <p id="quest">4.How are the opportunities for personal growth and profesional growth? </p>
+                
+                    <input type="radio" name="data[q4]" id="q4" value="5"
+                    class="inputRadio"
+                    checked> 5
+               
+                    <input type="radio" name="data[q4]" id="q4" value="4"
+                    class="inputRadio">4
+               
+                    <input type="radio" name="data[q4]" id="q4" value="3"
+                    class="inputRadio"> 3
+              
+                    <input type="radio" name="data[q4]" id="q4" value="2"
+                    class="inputRadio">2
+              
+                    <input type="radio" name="data[q4]" id="q4" value="1"
+                    class="inputRadio"> 1
+                
+             </div>
+             <!-- radio button section -->
+             <div class="form-group">
+                <p id="quest">5.How well enough do you get time to do the assigned work?</p>
+               
+                    <input type="radio" name="data[q5]" id="q5" value="5"
+                    class="inputRadio"
+                    checked> 5
+               
+                    <input type="radio" name="data[q5]" id="q5" value="4"
+                    class="inputRadio">4
+                
+                    <input type="radio" name="data[q5]" id="q5" value="3"
+                    class="inputRadio"> 3
+             
+                    <input type="radio" name="data[q5]" id="q5" value="2"
+                    class="inputRadio">2
+              
+                    <input type="radio" name="data[q5]" id="q5" value="1"
+                    class="inputRadio"> 1
+              
+            </div>
+            <!-- radio button section -->
+             <div class="form-group">
+                <p id="quest">6.How was your working relationship with your colleague?</p>
+                
+                    <input type="radio" name="data[q6]" id="q6" value="5"
+                    class="inputRadio"
+                    checked>5
+                
+                    <input type="radio" name="data[q6]" id="q6" value="4"
+                    class="inputRadio">4
+             
+                    <input type="radio" name="data[q6]" id="q6" value="3"
+                    class="inputRadio"> 3
+              
+                    <input type="radio" name="data[q6]" id="q6" value="2"
+                    class="inputRadio">2
+               
+                    <input type="radio" name="data[q6]" id="q6" value="1"
+                    class="inputRadio"> 1
+               
+            </div>
+            <!-- radio button section -->
+             <div class="form-group">
+                <p id="quest">7.How well do you think the environment at work helps you strike the right balance between your work life and personal life?</p>
+                
+                     <input type="radio" name="data[q7]" id="q7" value="5"
+                    class="inputRadio"
+                    checked> 5
+               
+                    <input type="radio" name="data[q7]" id="q7" value="4"
+                    class="inputRadio">4
+                
+                    <input type="radio" name="data[q7]" id="q7" value="3"
+                    class="inputRadio"> 3
+             
+                    <input type="radio" name="data[q7]" id="q7" value="2"
+                    class="inputRadio">2
+              
+                    <input type="radio" name="data[q7]" id="q7" value="1"
+                    class="inputRadio"> 1
+               
+            </div>
+            <!-- radio button section -->
+             <div class="form-group">
+                <p id="quest">8.How well do you find your job role exciting and challenging ?(on rating upto 5)</p>
+                 <input type="radio" name="data[q8]" id="q8" value="5"
+                    class="inputRadio"
+                    checked> 5
+               
+                    <input type="radio" name="data[q8]" id="q8" value="4"
+                    class="inputRadio">4
+                
+                    <input type="radio" name="data[q8]" id="q8" value="3"
+                    class="inputRadio"> 3
+             
+                    <input type="radio" name="data[q8]" id="q8" value="2"
+                    class="inputRadio">2
+              
+                    <input type="radio" name="data[q8]" id="q8" value="1"
+                    class="inputRadio"> 1
+            </div>
+            <!-- radio button section -->
+             <div class="form-group">
+                <p id="quest">9.Do you think you had enough training to solve customer issues?</p>
+                
+                     <input type="radio" name="data[q9]" id="q9" value="5"
+                    class="inputRadio"
+                    checked> 5
+               
+                    <input type="radio" name="data[q9]" id="q9" value="4"
+                    class="inputRadio">4
+                
+                    <input type="radio" name="data[q9]" id="q9" value="3"
+                    class="inputRadio"> 3
+             
+                    <input type="radio" name="data[q9]" id="q9" value="2"
+                    class="inputRadio">2
+              
+                    <input type="radio" name="data[q9]" id="q9" value="1"
+                    class="inputRadio"> 1
+                
+            </div>
+           <div class="form-group">
+            <input type="submit" value="Submit feedback">
+            </div>
+
+</form>
+<script>
+        
+var form = document.getElementById('sheetdb-form'); form.addEventListener("submit", e => { e.preventDefault(); fetch(form.action, { method : "POST", body: new FormData(document.getElementById("sheetdb-form")), }).then( response => response.json() ).then((html) =>{// you can put any JS code here 
+window.location.href="file:///C:/Users/DELL/OneDrive/Desktop/project1/form3.html";
+});
+});  
+</script>
+
+</body>
+</html>

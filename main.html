@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+ <link rel="stylesheet" href="form.css">
+ <title>Survey Form</title>
+<style>
+body {
+  background-image: url("survey1.jpg");
+  background-color: rgb(243, 160, 160);
+  background-size: cover;
+  position:relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image{
+        opacity:0.01;
+    }
+}
+
+.grid-container{
+  display:grid;
+  grid-column-gap:10px;
+  grid-row: auto;
+  grid-template-rows:1fr;
+grid-template-columns:1fr 1fr;
+padding-left:350px;
+  
+}
+#title{
+    color:#040005e1;
+    font-weight: 800;
+    font-size:80px ;
+    font-family: Georgia, serif;
+    text-align: center;    
+}
+h1{color:rgb(245, 22, 7);
+    font-weight: 300;
+    font-size:30px;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+p{
+    font-size: 1.125rem;
+    color:rgb(8, 8, 8);
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(238, 25, 10, 0.4);
+}
+</style>
+</head>
+<body>       
+<header align="center">
+ <h1 id="title" >Rating For Worker Satisfaction
+ </h1>
+</header>
+<br>
+<marquee height="60px" bgcolor="Green" style="font-size: 15px";><h2><b><i>Workers are requested to fill the FEEDBACK FORM!!!</i></b></h2></marquee>
+  
+<p align="center" style="font-size:60px";>Which is your current role?</p>
+<div class="grid-container">
+  <div id="Admin">
+  <img src="admin.png" width="200" height="200"><br>
+  <a href="admin.html">
+  <input type="button" class="button" value="Admin">
+  </a>
+  </div>
+  <div id="Worker">
+    <img src="worker.png" width="200" height="200">
+    <br>
+    <a href="form1.html">
+    <input type="button" class="button" value="Worker">
+    </a>
+  </div>
+ </div>
+</body>
+</html>

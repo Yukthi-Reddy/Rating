@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form.css" rel="stylesheet">
+    <title>Survey Form</title>
+
+    <style>
+        body {
+          background-image: url("survey1.jpg");
+          background-color: rgb(248, 247, 245);
+          background-size: cover;
+          position:relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image{
+                opacity:0.01;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container " >
+        <header align="center" >
+            <h1 id="title" style="font-size: 50px";>
+                Survey For Worker Satisfaction
+            </h1>
+            <p id="description">
+                Thank you for taking the time to help us to improve the plateform
+            </p>
+        </header>
+        
+        <form name="google-sheet" method="post" action="https://sheetdb.io/api/v1/0dh7zrh5ymtoy" id="sheetdb-form" onsubmit="validate()" >
+
+            <!-- Text section -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" name="data[name]" id="name" class="formControl" placeholder="Enter your name (*)" required>
+            </div>
+            <!-- end of text section -->
+
+            <!-- Type Email section -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="data[email]" id="email" class="formControl" placeholder="Enter your Email (*)" required>
+            </div>
+            <!-- end of Email section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="phone" name="data[phone]" id="phone" class="formControl" placeholder="Enter your phone number (+91)" required>
+            </div>
+            <!-- end of Number section -->
+
+            <!-- Type Number section -->
+            <div class="form-group">
+                <label for="address">Address <span class="clue">(optional)</span></label>
+                <input type="address" name="data[address]" id="address" >
+            </div>
+            <!--  end of number section -->
+            
+            <div class="form-group">
+                <input type="submit" value="Login">
+                </div>   
+        </form>
+    </div>
+<script>
+var form = document.getElementById('sheetdb-form'); form.addEventListener("submit", e => { e.preventDefault(); fetch(form.action, { method : "POST", body: new FormData(document.getElementById("sheetdb-form")), }).then( response => response.json() ).then((html) =>{// you can put any JS code here 
+window.location.href="file:///C:/Users/DELL/OneDrive/Desktop/project1/form2.html";
+});
+});  
+function validate(){
+            var name=document.forms[0].elements[0].value;
+            var email=document.forms[0].elements[1].value;
+            var mobile=document.forms[0].elements[2].value;
+            
+            var pemail=new RegExp("[a-z0-9]+[_]*[a-z0-9]+@[a-z]+.[a-z]+$","g");
+            var pmobile= /^\d{10}$/;
+
+            let flag = true
+            if (name == "") { 
+                alert("Name must be filled out");
+                flag = false;
+            }
+            if(!pemail.exec(email)) { 
+                alert("Provide Complete Email-id");
+                flag = false;
+            }
+            if(!pmobile.exec(mobile)) { 
+                alert("Not a Valid Mobile Number");
+                flag = false;
+            }
+
+            if(!flag) return false;
+        }
+</script>
+</body>
+</html>
